@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me-about2.jpg'
+import ME from '../../assets/me-about2.png'
 
 import {BsAward, BsFolderCheck} from 'react-icons/bs'
 import {HiOutlineUserGroup} from 'react-icons/hi'
@@ -13,7 +13,7 @@ const About = () => {
 
       <div className="container about__container">
         <div className="about__me">
-            <div className="about_me-image">
+            <div className="about__me-image">
               <img src={ME} alt="About me" />
             </div>
         </div>
@@ -35,6 +35,10 @@ const About = () => {
               <small>5+ Completos</small>
             </article>
           </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam cum commodi porro quaerat quis. Veritatis, iusto modi consequatur repellendus aperiam quibusdam corrupti culpa quas adipisci tempore vero et? Incidunt, nihil.
+          </p>
+          <a href="#contact" className='btn btn-primary'>Vamos conversar</a>
         </div>
       </div>
 
