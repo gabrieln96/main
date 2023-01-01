@@ -40,6 +40,7 @@ const About = () => {
           </p>
           <a href="#contact" className='btn btn-primary'>Vamos conversar!</a>
         </div>
+        
       </div>
 
     </section>
