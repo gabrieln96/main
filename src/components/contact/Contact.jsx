@@ -3,7 +3,19 @@ import {HiOutlineMail} from 'react-icons/hi'
 import {BsWhatsapp, BsTwitter} from 'react-icons/bs'
 import './contact.css'
 
+import emailjs from 'emailjs-com'
+import { useRef } from 'react';
+
 const Contact = () => {
+  const form = useRef ();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_dh783zc', 'template_0frrjr6', form.current, 'G_a_eIAG5V8a7Rpen')
+      e.target.reset()
+  }; 
+
   return (
     <section id='contact'>
       <h5>Entre Em Contato</h5>
@@ -30,7 +42,7 @@ const Contact = () => {
             <a href="https://twitter.com/araujogabriel__?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-dnt="true" data-show-count="false" target='_blank'>Envie uma mensagem</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
            </article>
         </div>
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder='Seu Nome Completo' required/>
           <input type="email" name='email' placeholder='Seu Email' required/>
           <textarea name="message" rows="6" placeholder='Sua Mensagem' required></textarea>
