@@ -1,7 +1,9 @@
 .portfolio__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
+    display: flex;
+    justify-content: space-around;
 }
 
 .portfolio__item {
